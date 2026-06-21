@@ -5,44 +5,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="op.jpg">
-        <title>joke generator</title>
+        <title>Joke Generator</title>
     </head>
 
     <body>
+        
+        <h1 id="title">Joke Generator</h1>
 
-        <div class="container">
+        <p id="joke">Click to generate the joke!</p>
 
-            <h1 id="pps">Welcome</h1>
-
-            <p id="joke">This is the joke</p>
-
-            <p>Press the button to display a new joke</p>
-
-            <button id="press">New Joke</button>
-        </div>
-
-        <script>
-
-            function getJoke() {
-
-                fetch('https://official-joke-api.appspot.com/random_joke')
-                    .then(response => response.json())
-                    .then(data => {
-                            document.getElementById('joke').textContent = `${data.setup} - ${data.punchline}`; 
-                        })
-                    .catch(error => {
-                            document.getElementById('joke').textContent = "Failed to fetch the joke!";
-                            console.error("Error fetching joke!", error);
-                        }); 
-            }
-
-            const press = document.getElementById('press');
-
-            press.onclick = getJoke();
-
-            getJoke();
-
-        </script>
+        <button id="btn">New Joke</button>
         
     </body>
 
