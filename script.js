@@ -2,7 +2,7 @@
 const joke  = document.getElementById('joke');
 const btn  = document.getElementById('btn');
 const joke02 = document.getElementById('joke02');
-const fact = document.getElementById('joke');
+const fact = document.getElementById('fact');
 
     function getJoke() {
 
@@ -52,15 +52,14 @@ const fact = document.getElementById('joke');
             });
     }
 
-    btn.onclick = getJoke;
+    btn.onclick = function() {
 
-    btn.onclick = getJoke02;
+        getJoke();
+        getJoke02();
+        getFact();
 
-    btn.onclick = getFact;
-
-    getJoke();
-    getJoke02();
-    getFact();
+    }
+    
 
     document.getElementById('title').onclick = function() {
         this.style.color = this.style.color === 'blue' ? 'black' : 'blue';
