@@ -12,6 +12,10 @@
 
  ![alt](/assets/third.png)
 
- ## ADDING THE NEW JOKE TO THE APP
+## ADDING THE NEW JOKE TO THE APP
 
-  ![alt](/assets/mod02.png)
+ ![alt](/assets/mod02.png)
+
+## ADDING A FACT 
+
+ ![alt](/assets/fourth.png)

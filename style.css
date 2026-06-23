@@ -27,3 +27,10 @@ button {
     background: wheat;
     border-radius: 10px;
 }
+
+#fact {
+    margin: 20px;
+    padding: 20px;
+    background: rgb(241, 235, 224);
+    border-radius: 10px;
+}

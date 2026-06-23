@@ -2,6 +2,7 @@
 const joke  = document.getElementById('joke');
 const btn  = document.getElementById('btn');
 const joke02 = document.getElementById('joke02');
+const fact = document.getElementById('joke');
 
     function getJoke() {
 
@@ -37,13 +38,29 @@ const joke02 = document.getElementById('joke02');
                 });
     }
 
+    function getFact() {
+
+        joke.textContent = 'Get ready for the new fact..';
+
+        fetch('https://uselessfacts.jsph.pl/random.json?language=en')
+            .then(res => res.json())
+            .then(data => {
+                    fact.textContent = ' Did you know that: ' + data.text;
+                })
+            .catch(() => {
+                fact.textContent = 'Sorry! We failed to load the fact';
+            });
+    }
+
     btn.onclick = getJoke;
 
     btn.onclick = getJoke02;
 
-
+    btn.onclick = getFact;
 
     getJoke();
+    getJoke02();
+    getFact();
 
     document.getElementById('title').onclick = function() {
         this.style.color = this.style.color === 'blue' ? 'black' : 'blue';
